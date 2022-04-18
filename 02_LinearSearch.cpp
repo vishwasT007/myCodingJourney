@@ -14,11 +14,17 @@ int main() {
 
 
     int arr[] = {1,2,3,4,5,6};
-
-    int key = 1;
     int size = sizeof(arr) / sizeof(arr[0]);
+    int key;
+    cin>>key;
+
+    int index = linearSearch(arr, size, key);
     
-    cout<<linearSearch(arr, size , key) << endl;
+    if(index != -1) {
+        cout<< key << "is present at index "<< index << endl;
+    } else {
+        cout<< key << "is Not Found !! "<< endl;
+    }
     
 
     return 0;
